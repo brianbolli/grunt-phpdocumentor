@@ -157,12 +157,12 @@ exports.init = function(grunt) {
             phpDocumentorCommand += ' --target=' + target;
             phpDocumentorCommand += ' --directory=' + directory;
 
-            if (options.ignore)
+            if (options.ignore && options.ignore.length > 0)
             {
                 phpDocumentorCommand += ' --ignore="' + options.ignore + '"';
             }
             
-            if (options.filename)
+            if (options.filename && options.filename.length > 0)
             {
                 phpDocumentorCommand += ' --filename="' + options.filename + '"';
             }
