@@ -157,6 +157,16 @@ exports.init = function(grunt) {
             phpDocumentorCommand += ' --target=' + target;
             phpDocumentorCommand += ' --directory=' + directory;
 
+            if (options.ignore)
+            {
+                phpDocumentorCommand += ' --ignore="' + options.ignore + '"';
+            }
+            
+            if (options.filename)
+            {
+                phpDocumentorCommand += ' --filename="' + options.filename + '"';
+            }
+            
             // TODO: see the help of the command with 'phpdoc help run' and add the missing options
 
         } 
@@ -176,6 +186,16 @@ exports.init = function(grunt) {
             phpDocumentorCommand += ' --target=' + target;
             phpDocumentorCommand += ' --directory=' + directory;
                 
+            if (options.ignore)
+            {
+                phpDocumentorCommand += ' --ignore="' + options.ignore + '"';
+            }
+            
+            if (options.filename)
+            {
+                phpDocumentorCommand += ' --filename="' + options.filename + '"';
+            }
+            
             // TODO: see the help of the command with 'phpdoc help parse' and add the missing options
             
         } 
